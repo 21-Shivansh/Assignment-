@@ -1,6 +1,8 @@
 body, html {
     height: 100%;
     width: 100%;
+    margin: 0%;
+    padding: 0%;
 }
 
 /* .parent{
@@ -32,3 +34,35 @@ body, html {
     animation: movebox 1s ease-in-out ;
 } */
 
+.container{
+    height: 100%;
+    width: calc(100% - 10em);
+    background-color: lightseagreen;
+    padding: 0 5em;
+}
+
+.rolling{
+    background-color: bisque;
+    max-width: 100%;
+    height: fit-content;
+    display: flex;
+    overflow: hidden;
+}
+
+img{
+    height: 10em;
+    animation: slide;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    } 
+}
