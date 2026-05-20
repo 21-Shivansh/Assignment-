@@ -78,7 +78,7 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 4em;
+    gap: 2em;
 }
 
 .heading_bigtext{
@@ -91,7 +91,7 @@ nav{
 .heading_smalltext{
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
-    margin: 0%;
+    margin: 0 0 2em 0;
 }
 
 .heading_btn{
@@ -137,12 +137,12 @@ nav{
     height: 50vh;
     display: flex;
     justify-content: space-between;
-    gap: 2.5em;
+    gap: 3em;
 }
 
 .cards{
-    height: 75% ;
-    width: 23%;
+    height: 78% ;
+    width: 21%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -153,8 +153,10 @@ nav{
 }
 
 .cards:hover{
+    scale: 1.1;
     box-shadow: 0.5em 0.5em 0.8em rgb(162, 162, 162);
-    transition-duration: 1.5s;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
 }
 
 .cards_bigtext{
@@ -178,7 +180,7 @@ nav{
 
 .second_page{
     min-height: 100vh;
-    margin-top: 7%;   
+    margin-top: 7%;  
 }
 
 .second_page_header{
@@ -239,7 +241,7 @@ nav{
     height: 29em;
     width: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
 }
 
 .sp_grid_img:hover{
@@ -263,7 +265,9 @@ nav{
 }
 .sp_grid1_bottom_btn{
     height: 2.5em;
-    width: 7em;
+    width: fit-content;
+    text-align: center;
+    padding: 0 1em;
     border: 1px solid black;
     border-radius: 2em;
     background-color: white;
@@ -290,4 +294,230 @@ nav{
 .sp_grid_4{
     grid-area: grid4;
     overflow: hidden;
+}
+
+.third_page{
+    min-height: 100vh;
+    margin-top: 7%;
+}
+
+.third_page_header{
+    height: 9%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(206, 206, 206);
+    margin-bottom: 5.5em;
+}
+
+.tp_grid_div{
+    min-height: 195vh ;
+    display: grid;
+    grid-template-columns: 23.20% 23.20% 23.20% 23.20% ;
+    grid-template-rows: 26.35% 26.35% 19% 19.35% ;
+    gap: 2em;
+    grid-template-areas: 
+    "g1 g2 g3 g4"
+    "g8 g7 g6 g5"
+    "g9 g9 g9 g9"
+    "g10 g11 g12 g13"
+    ;
+}
+
+.tp_grid1{
+    background-color: #F1F5F9;
+    grid-area: g1;
+    padding: 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid1_text_small{
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.grid1_text_big{
+    font-size: 2em;
+}
+
+.tp_nav_btn{
+    height: 3.2em;
+    width: 8em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    border: 1px solid black;
+    border-radius: 2.5em;
+    background-color: rgb(0, 0, 0);
+    color: rgb(243, 243, 243);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.arrow_img{
+    height: 1.2em;
+    transform: rotate(45deg);
+}
+
+.tp_grid2{
+    background-color: #F1F6F5;
+    grid-area: g2;
+    padding: 3em 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid2_text_small{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+}
+
+.grid2_text_big{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    margin: 0%;
+}
+
+.tp_grid3{
+    background-color: #F8F8F8;
+    grid-area: g3;
+    padding: 3em 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tp_grid4{
+    grid-area: g4;
+}
+
+.tp_grid5{
+    background-color: #FFFAE7;
+    grid-area: g5;
+    padding: 3em 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tp_grid6{
+    background-color: #F8EDE3;
+    grid-area: g6;
+    padding: 3em 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tp_grid7{
+    background-color: #F8F8F8;
+    grid-area: g7;
+    padding: 3em 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tp_grid8{
+    grid-area: g8;
+}
+
+.tp_grid9{
+    grid-area: g9;
+    padding: 3em 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid9_text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3.5em;
+    margin: 0%;
+}
+
+.tp_grid10{
+    grid-area: g10;
+}
+
+.tp_grid11{
+    grid-area: g11;
+}
+
+.grid11_text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    text-align: center;
+}
+
+.tp_grid12{
+    grid-area: g12;
+}
+
+.tp_grid13{
+    grid-area: g13;
+}
+
+.fourth_page{
+    background-color: rgb(234, 83, 219);
+    min-height: 100vh;
+    margin-top: 2%;
+}
+
+.fp_griddiv{
+    background-color: #EDDED5;
+    min-height: 55vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    gap: 1.5em;
+    grid-template-areas: 
+    "g1 g2 g3 g4"
+    ;
+}
+
+.fp_grid1{
+    background-color: #F1F6F5;
+    padding: 3em 2.5em;
+    grid-area: g1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fp_grid2{
+    background-color: rgb(192, 185, 0);
+    grid-area: g2;
+    
+}
+
+.fp_img{
+    height: 89%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    margin: 0%;
+}
+
+.fp_grid2_div{
+    background-color: white;
+    height: 11%;
+    margin: 0%;
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fp_grid3{
+    background-color: rgb(5, 13, 22);
+    grid-area: g3;
+}
+
+.fp_grid4{
+    background-color: rgb(5, 36, 122);
+    grid-area: g4;
 }
