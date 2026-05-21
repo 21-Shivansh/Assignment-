@@ -462,13 +462,11 @@ nav{
 }
 
 .fourth_page{
-    background-color: rgb(234, 83, 219);
     min-height: 100vh;
     margin-top: 2%;
 }
 
 .fp_griddiv{
-    background-color: #EDDED5;
     min-height: 55vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -477,10 +475,10 @@ nav{
     grid-template-areas: 
     "g1 g2 g3 g4"
     ;
+    margin-bottom: 9em;
 }
 
 .fp_grid1{
-    background-color: #F1F6F5;
     padding: 3em 2.5em;
     grid-area: g1;
     display: flex;
@@ -489,9 +487,8 @@ nav{
 }
 
 .fp_grid2{
-    background-color: rgb(192, 185, 0);
     grid-area: g2;
-    
+    position: relative;    
 }
 
 .fp_img{
@@ -502,6 +499,49 @@ nav{
     margin: 0%;
 }
 
+.fp_img:hover ~ .insta_img,
+.fp_img:hover ~ .face_img,
+.fp_img:hover ~ .twit_img{
+    animation: iconpopup;
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes iconpopup {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-230%);
+    }
+}
+
+.insta_img{
+    height: 1.85em;
+    position: absolute;
+    z-index: 0;
+    bottom: 2%;
+    right: 27%;
+}
+
+.face_img{
+    height: 1.8em;
+    position: absolute;
+    z-index: 0;
+    bottom: 2%;
+    right: 15%;
+
+}
+
+.twit_img{
+    height: 1.8em;
+    position: absolute;
+    z-index: 0;
+    bottom: 2%;
+    right: 3%;
+}
+
 .fp_grid2_div{
     background-color: white;
     height: 11%;
@@ -510,14 +550,216 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 1;    
 }
 
 .fp_grid3{
-    background-color: rgb(5, 13, 22);
     grid-area: g3;
+    position: relative;
 }
 
 .fp_grid4{
-    background-color: rgb(5, 36, 122);
     grid-area: g4;
+    position: relative;
+}
+
+.fpt_outter{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.fpt_inner{
+    height: 45vh;
+    width: fit-content;
+    display: flex;
+    justify-content: end;
+    gap: 3em;
+    border-bottom: 1px solid rgb(206, 206, 206) ;
+}
+
+.fpt_inner_img{
+    height: 2.8em;
+}
+
+.fpt_inner_bigtext{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    margin: 0.2em 0 2em 0;
+}
+
+.fpt_inner_smalltext{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.fpt_inner2{
+    height: 40vh;
+    width: fit-content;
+    display: flex;
+    justify-content: end;
+    gap: 3.1em;
+    margin-top: 3.9em;
+}
+
+.fp_bottom{
+    height: 80vh;
+    background-color: #F1F6F5;
+    display: flex;
+    align-items: center;
+}
+
+.fp_bottom_div1{
+    height: 100%;
+    width: 32.5%;
+}
+
+.fpb_text{
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    top: 20%;
+    left: 40%;
+}
+
+.fp_bottom_div2{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fp_bottom_div_bigtext{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+}
+
+.fp_bottom_div_smalltext{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.4em;
+    margin: 0%;
+    margin-bottom: 3em;
+}
+
+.fifth_page{
+    background-color: aqua;
+    min-height: 100vh;
+}
+
+.vp_grid{
+    background-color: pink;
+    height: 125vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "g1 g2 g3 g4"
+    "g5 g6 g7 g8"
+    ;
+    gap: 1.8em;
+}
+
+.vp_grid1{
+    background-color: #EDDED5;
+    grid-area: g1;
+    overflow: hidden;
+}
+
+.vp_gridimg{
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s ease;
+}
+
+.vp_gridimg:hover{
+    transform: scale(1.1);
+}
+
+.vp_grid_bottom{
+    background-color: white;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.vp_grid_bottom_bigtext{
+    margin: 0%;
+    margin-top: 0.5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+
+.vp_grid_bottom_smalltext{
+    margin: 0%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+}
+
+.vp_grid2{
+    background-color: #EDDED5;
+    grid-area: g2;
+    overflow: hidden;
+}
+
+.vp_grid3{
+    background-color: #EDDED5;
+    grid-area: g3;
+    overflow: hidden;
+}
+
+.vp_grid4{
+    background-color: #EDDED5;
+    grid-area: g4;
+    overflow: hidden;
+}
+
+.vp_grid5{
+    background-color: #EDDED5;
+    grid-area: g5;
+    position: relative;
+}
+
+.vp_insta_img{
+    height: 2em;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+}
+
+.vp_face_img{
+    height: 2em;
+    position: absolute;
+    top: 20%;
+    left: 13%;
+}
+
+.vp_twit_img{
+    height: 2em;
+    position: absolute;
+    top: 20%;
+    left: 26%;
+}
+
+.vp_grid6{
+    background-color: #EDDED5;
+    grid-area: g6;
+}
+
+.vp_grid7{
+    background-color: #EDDED5;
+    grid-area: g7;
+}
+
+.vp_grid8{
+    background-color: #EDDED5;
+    grid-area: g8;
 }
