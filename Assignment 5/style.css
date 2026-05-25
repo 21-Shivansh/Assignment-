@@ -644,12 +644,11 @@ nav{
 }
 
 .fifth_page{
-    background-color: aqua;
     min-height: 100vh;
+    margin-top: 10%;
 }
 
 .vp_grid{
-    background-color: pink;
     height: 125vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -662,7 +661,6 @@ nav{
 }
 
 .vp_grid1{
-    background-color: #EDDED5;
     grid-area: g1;
     overflow: hidden;
 }
@@ -705,25 +703,21 @@ nav{
 }
 
 .vp_grid2{
-    background-color: #EDDED5;
     grid-area: g2;
     overflow: hidden;
 }
 
 .vp_grid3{
-    background-color: #EDDED5;
     grid-area: g3;
     overflow: hidden;
 }
 
 .vp_grid4{
-    background-color: #EDDED5;
     grid-area: g4;
     overflow: hidden;
 }
 
 .vp_grid5{
-    background-color: #EDDED5;
     grid-area: g5;
     position: relative;
 }
@@ -750,16 +744,78 @@ nav{
 }
 
 .vp_grid6{
-    background-color: #EDDED5;
     grid-area: g6;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.vp_grid6_head{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+
+.vp_grid6_small{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0%;
+}
+
+.vp_nav_btn{
+    height: 3.2em;
+    width: 8em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    border: 1px solid black;
+    border-radius: 2.5em;
+    background-color: white;
+    color: black;
+}
+
+.vp_nav_btn:hover{
+    background-color: black;
+    color: white;
 }
 
 .vp_grid7{
-    background-color: #EDDED5;
     grid-area: g7;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
 }
 
 .vp_grid8{
-    background-color: #EDDED5;
     grid-area: g8;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+footer{
+    height: 10vh;
+    border-top: 1px solid rgb(191, 191, 191);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_left_text{
+    font-family: 'Times New Roman', Times, serif;
+    color: grey;
+}
+
+.footer_left_text_span{
+    color: black;
+    text-decoration: underline;
+}
+
+.footer_right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
 }
