@@ -55,3 +55,55 @@
 // }
 
 
+// let n = Number(prompt("Enter a number :"));
+// if( n < 1 || isNaN(n)) console.log("invalid input")
+// else{
+//     sum = 0;
+//     while( n >=1) sum += n--;
+//     console.log(sum)
+// }
+
+// let arr = [10,20,30,40,50];
+// let newAr = arr.reduce((acc,val)=>{
+//     if(acc>val){
+//         return acc;
+//     }
+//     return val;
+// },0)
+// console.log(newAr)
+
+// let n = Number(prompt("Enter a number :"))
+
+// let isPrime = false;
+
+// for (let i = 2; i < Math.floor(n) ; i++) {
+//     if(n%i === 0){
+//         isPrime = false;
+//         break;
+//     }else{
+//         isPrime = true;
+//     }
+// }
+
+// console.log(isPrime)
+
+
+// let a = 12;
+
+// for (let i = 1; i <= Math.floor(a/2); i++) {
+//     if(a%i === 0){
+//         console.log(i)
+//     }
+// }
+// console.log(a)
+
+// let obj = {
+//     name:'Krishna',
+//     age:22,
+//     canVote:function(){
+//         console.log(this)
+        
+//     }
+// }
+
+// console.log(obj.canVote())
