@@ -107,3 +107,16 @@
 // }
 
 // console.log(obj.canVote())
+
+
+let obj = {
+    user : 'Krishna',
+    greet(){
+        let sayHi = () => {
+            console.log(`${this.user} welcome...`)
+        }
+        sayHi();
+    }
+}
+
+obj.greet();
