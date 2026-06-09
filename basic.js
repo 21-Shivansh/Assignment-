@@ -6,7 +6,7 @@
 
 // if(avg >= 8){
 //     console.log(avg)
-//     console.log("You are a good student")   
+//     console.log("You are a good student")
 // }else{
 //     console.log(avg)
 //     console.log("need imgprovemnt")
@@ -54,7 +54,6 @@
 //     console.log(false)
 // }
 
-
 // let n = Number(prompt("Enter a number :"));
 // if( n < 1 || isNaN(n)) console.log("invalid input")
 // else{
@@ -87,7 +86,6 @@
 
 // console.log(isPrime)
 
-
 // let a = 12;
 
 // for (let i = 1; i <= Math.floor(a/2); i++) {
@@ -102,21 +100,102 @@
 //     age:22,
 //     canVote:function(){
 //         console.log(this)
-        
+
 //     }
 // }
 
 // console.log(obj.canVote())
 
+// let obj = {
+//     user : 'Krishna',
+//     greet(){
+//         let sayHi = () => {
+//             console.log(`${this.user} welcome...`)
+//         }
+//         sayHi();
+//     }
+// }
 
-let obj = {
-    user : 'Krishna',
-    greet(){
-        let sayHi = () => {
-            console.log(`${this.user} welcome...`)
-        }
-        sayHi();
-    }
-}
+// obj.greet();
 
-obj.greet();
+// function Best(name,concept){
+//     this.name = name;
+//     this.concept = concept;
+//     this.greet = function(){
+//         console.log(this.name);
+//         console.log(this.concept);
+//     }
+// }
+
+// let b1 = new Best('Candle King','M M C');
+// let b2 = new Best('NitishFX','S M C')
+
+// console.log(b1)
+// console.log(b2)
+
+// b1.greet();
+
+// Before ES6 ----------------------
+
+// function Students (fname,lname,tutor){
+//     this.fname = fname;
+//     this.lname = lname;
+//     this.tutor = tutor;
+//     this.intro = function(){
+//         console.log(`Hi ${this.fname} ${this.lname}, your tutor is ${this.tutor}`)
+//     }
+// }
+
+// Students.prototype.intro = function(){
+//     console.log(`Hi ${this.fname} ${this.lname}, your tutor is ${this.tutor}`)
+// }
+
+// let s1 = new Students('Krishna','singh','candle king')
+
+// console.log(s1)
+// s1.intro()
+
+// After ES6 ------------------------
+
+// class Students {
+//     constructor(fname,lname,tutor){
+//         this.fname = fname;
+//         this.lname = lname;
+//         this.tutor = tutor;
+//     }
+//     intro = () => {
+//         console.log(`Hi ${this.fname} ${this.lname}, your tutor is ${this.tutor}`)
+
+//     }
+// }
+
+// let s1 = new Students('Krishna','singh','candle king')
+
+// console.log(s1)
+// s1.intro();
+
+// class Students {
+//     constructor(fn,ln,gen,age,intro){
+//         this.fn = fn;
+//         this.ln = ln;
+//         this.gen = gen;
+//         this.age = age;
+//     }
+    
+// }
+
+// function intro(s1){
+//         if(s1.age > 18){
+//         console.log(`welcome ${s1.fn} ${s1.ln} of gender ${s1.gen} can vote.`)
+//         }else{
+//         console.log(`welcome ${fn} ${ln} of gender ${gen} can not vote.`)
+//         }
+// }
+
+// let s1 = new Students('krishna','Prabhu','male',31,intro);
+
+// console.log(s1)
+
+// intro(s1);
+
+
