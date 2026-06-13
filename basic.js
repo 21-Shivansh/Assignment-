@@ -199,3 +199,45 @@
 // intro(s1);
 
 
+// let a = new Promise((res,rej)=>{
+//     let status = false;
+
+//     if(status){
+//         console.log("Fullfiled")
+//     }else{
+//         console.log('Rejected')
+//     }
+// })
+
+// let a = new Promise((res,rej)=>{
+//     console.log("your food is coming...")
+
+//     let status = false;
+
+//     setTimeout(()=>{
+//         if(status){
+//             console.log('your food is here. Pick it up...👍');
+//             res();
+//         }else{
+//             console.log('your order is canceled due to some reason...🤷‍♀️');
+//             rej();
+//         }
+//     },4000)
+// }).then(()=>{
+//     console.log('pay for your bill 💸')
+// }).catch(()=>{
+//     console.log('raise a complaint....❌')
+// })
+
+const bulb = document.querySelector('.bulb');
+const btn = document.querySelector('button');
+
+
+btn.addEventListener('click',()=>{
+    bulb.classList.toggle('glowUp')
+    if(btn.textContent === 'On'){
+        btn.textContent = 'Off';
+    }else{
+        btn.textContent = 'On';d
+    }
+})

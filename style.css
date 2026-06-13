@@ -34,7 +34,7 @@ body, html {
     animation: movebox 1s ease-in-out ;
 } */
 
-.container{
+/* .container{
     height: 100%;
     width: calc(100% - 10em);
     background-color: lightseagreen;
@@ -65,4 +65,16 @@ img{
     100%{
         transform: translateX(-100%);
     } 
+} */
+
+
+.bulb{
+    height: 150px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.glowUp{
+    background-color: yellow;
 }
