@@ -181,7 +181,7 @@
 //         this.gen = gen;
 //         this.age = age;
 //     }
-    
+
 // }
 
 // function intro(s1){
@@ -197,7 +197,6 @@
 // console.log(s1)
 
 // intro(s1);
-
 
 // let a = new Promise((res,rej)=>{
 //     let status = false;
@@ -229,15 +228,208 @@
 //     console.log('raise a complaint....❌')
 // })
 
-const bulb = document.querySelector('.bulb');
-const btn = document.querySelector('button');
+// const bulb = document.querySelector('.bulb');
+// const btn = document.querySelector('button');
+
+// btn.addEventListener('click',()=>{
+//     bulb.classList.toggle('glowUp');
+//     if(btn.textContent === 'On'){
+//         btn.textContent = 'Off';
+//     }else{
+//         btn.textContent = 'On'
+//     }
+// })
+
+// 1.
+
+// let p = [100,250,500,150,700];
+
+// let np = p.filter((ele,idx)=>{
+//     if(ele > 300){
+//         return ele;
+//     }
+// })
+
+// console.log(np);
+
+// 2.
+
+// let marks = [80,90,70,85,95];
+
+// let avg = marks.reduce((acc,curr)=>{
+//     acc += curr;
+//     return acc;
+// })
+
+// console.log(avg / marks.length )
+
+// 3.
+
+// let numbers= [1,2,3,2,4,2,5,1,1,1];
+// let count = {};
+
+// for(let i = 0;i<numbers.length;i++){
+//     if(count[numbers[i]]){
+//         count[numbers[i]] += 1;
+//     }else{
+//         count[numbers[i]] = 1;
+//     }
+// }
+
+// let maxCount = 0;
+// let mostFreq;
+
+// for(let key in count){
+//     if(count[key] > maxCount){
+//         maxCount = count[key];
+//         mostFreq = key;
+//     }
+// }
+
+// console.log(mostFreq)
+
+// 4.
+
+// letuser = {
+//   name: "Ritik",
+//   age: 20,
+// };
+
+// letuser.age = 21;
+
+// console.log(letuser)
 
 
-btn.addEventListener('click',()=>{
-    bulb.classList.toggle('glowUp')
-    if(btn.textContent === 'On'){
-        btn.textContent = 'Off';
-    }else{
-        btn.textContent = 'On';d
+
+
+// 5.
+
+// letuser = {
+//   name: "Ritik",
+//   age: 20,
+//   city: "Bhopal",
+// };
+
+// for( let key in letuser){
+//     console.log(key,':',letuser[key])
+// }
+
+
+
+// 6.
+
+// let employees = {
+//   aman: 25000,
+//   ritik: 50000,
+//   priya: 45000,
+// };
+
+// let highestSalary = 0;
+// let personName;
+
+// for(let key in employees){
+//     if(employees[key] > highestSalary){
+//         highestSalary = employees[key];
+//         personName = key;
+//     }
+// }
+
+// console.log(personName)
+
+
+
+
+// 7.
+
+// function greet(user){
+//     console.log(`Hello, ${user}...`)
+// }
+// greet('Ritik');
+
+
+
+
+
+// 8.
+
+// let discountCal = (price) =>{
+//     return price*0.1;
+// }
+
+// console.log(discountCal(1000))
+
+
+
+
+// 9.
+
+// function allSum(...nums){
+//     return nums.reduce((acc,curr)=>{
+//         acc += curr;
+//         return acc;
+//     })
+// };
+
+// let a = allSum(1,2,3,4);
+
+// console.log(a)
+
+
+const inputText = document.querySelector('input');
+const addBtn = document.querySelector('.btn');
+const box2 = document.querySelector('.box2');
+
+
+
+
+addBtn.addEventListener('click',()=>{
+    if(inputText.value.trim()===""){
+        return;
     }
+
+    const taskDiv = document.createElement('div');
+    taskDiv.setAttribute('class','task_div');
+    box2.appendChild(taskDiv);
+    
+    const pText = document.createElement('p');
+    pText.setAttribute('class','task_text');
+    pText.textContent = inputText.value;
+    taskDiv.appendChild(pText);
+
+    const btnE = document.createElement('button');
+    btnE.setAttribute('class','btn edit');
+    btnE.textContent = 'Edit';
+
+    const btnD = document.createElement('button');
+    btnD.setAttribute('class','btn del');
+    btnD.textContent = 'Delete';
+
+    const btnDiv = document.createElement('div');
+    btnDiv.setAttribute('class','btn_div');
+    taskDiv.appendChild(btnDiv)
+    btnDiv.before(pText);
+    btnDiv.append(btnE,btnD);
+
+    let editStatus = false;
+
+
+    btnE.addEventListener('click',()=>{
+        if(!editStatus){
+            btnE.textContent = 'Done';
+            btnE.style.backgroundColor = 'green';
+
+            let eInput = document.createElement('input');
+            eInput.value = pText.textContent;
+            pText.replaceWith(eInput)
+        }
+    })
+
+    btnD.addEventListener('click',()=>{
+        taskDiv.remove();
+    })
+
+    inputText.value = null;
+
 })
+
+
