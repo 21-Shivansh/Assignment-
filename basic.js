@@ -411,16 +411,26 @@ addBtn.addEventListener('click',()=>{
     btnDiv.append(btnE,btnD);
 
     let editStatus = false;
-
+    let eInput;
 
     btnE.addEventListener('click',()=>{
         if(!editStatus){
             btnE.textContent = 'Done';
             btnE.style.backgroundColor = 'green';
 
-            let eInput = document.createElement('input');
+            eInput = document.createElement('input');
             eInput.value = pText.textContent;
-            pText.replaceWith(eInput)
+            pText.replaceWith(eInput);
+
+            editStatus = true;
+        }else{
+            pText.textContent = eInput.value;
+
+        eInput.replaceWith(pText);
+
+        btnE.textContent = 'Edit';
+        btnE.style.backgroundColor = 'rgb(244, 167, 74)';
+        editStatus = false;
         }
     })
 
@@ -431,5 +441,6 @@ addBtn.addEventListener('click',()=>{
     inputText.value = null;
 
 })
+
 
 
