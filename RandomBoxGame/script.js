@@ -32,7 +32,7 @@ btn.addEventListener('click',()=>{
 
         lastBox = boxes[random];
 
-    }, 250);
+    }, 180);
 
     setTimeout(() => {
         clearInterval(interval);
