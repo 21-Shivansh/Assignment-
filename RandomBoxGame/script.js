@@ -3,39 +3,56 @@ let innerBox = document.querySelector('.innerBox');
 let btn = document.querySelector('button');
 let boxes = document.querySelectorAll('.box');
 let timmer = document.querySelector('.timmer');
+let gmdiv = document.querySelector('.gmdiv');
+let drp = document.querySelector('select');
+let score = document.querySelector('.score');
 
-btn.addEventListener('click',()=>{
-    let timmerContent = 0;
-    timmer.textContent = timmerContent;
+
+let timmerContent = 0;
+timmer.textContent = timmerContent;
+
+let scoreContent = 0;
+score.textContent = scoreContent;
+
+let repeat = (intervalTime,shuffleTime,timeoutTime) => {
+    btn.style.visibility = "hidden";
     let lastBox = null;
 
-    if(timmerContent !== 0){
-        timmerContent = 0;
-        timmer.textContent = timmerContent;
-        return;
-    }
-
-    
     let interval = setInterval(() => {
-        timmerContent += 1;
-        timmer.textContent = timmerContent;
-    }, 1000);
-
+      timmerContent += 1;
+      timmer.textContent = timmerContent;
+    }, intervalTime);
 
     let shuffle = setInterval(() => {
+      boxes.forEach((box) => (box.style.backgroundColor = "white"));
+      let random = Math.floor(Math.random() * boxes.length);
+      boxes[random].style.backgroundColor = "rgb(255, 19, 149)";
+      lastBox = boxes[random];
 
-        boxes.forEach(box => box.style.backgroundColor = 'white')
-
-        let random = Math.floor(Math.random()*boxes.length);
-
-        boxes[random].style.backgroundColor = 'red';
-
-        lastBox = boxes[random];
-
-    }, 180);
+      
+      
+    }, shuffleTime);
 
     setTimeout(() => {
-        clearInterval(interval);
-        clearInterval(shuffle);
-    }, 5000);
-})
+      clearInterval(interval);
+      clearInterval(shuffle);
+    }, timeoutTime);
+
+    setTimeout(() => {
+      gmdiv.style.display = "flex";
+      
+    }, timeoutTime + 250);
+};
+
+
+
+btn.addEventListener("click", () => {
+  if (level == "Easy") {
+    repeat(1000,500,15000);    
+  } else if (level == "Medium"){
+    repeat(1000,250,10000);
+  } else {
+    repeat(1000,180,7000);
+  }
+
+});

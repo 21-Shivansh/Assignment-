@@ -6,7 +6,7 @@
 body,html{
     height: 100%;
     width: 100%;
-    background-color: #333333;
+    background-color: #426480;
 }
 
 .outerBox{
@@ -28,6 +28,27 @@ p{
     color: white;
 }
 
+.topbox{
+    width: inherit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+select{
+    height: 2em;
+    width: 6em;
+    font-size: x-large;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+}
+
+option{
+    color: black;
+}
+
 .innerBox{
     height: 30em;
     width: inherit;
@@ -38,13 +59,13 @@ p{
 }
 
 .box{
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(255, 255, 255);
     height: 9em;
     width: 10em;
-    border: 1px solid black;
     border-radius: 20px;
     margin: 0%;
     padding: 0%;
+    box-shadow: 5px 5px 10px rgb(71, 71, 71);
 }
 
 button{
@@ -57,5 +78,34 @@ button{
     font-size: x-large;
     border: none;
     border-radius: 13px;
+    box-shadow: 3px 3px 5px black;
 }
+
+button:focus{
+    box-shadow: 2px 2px 1px  black;
+}
+
+.gmdiv{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.544);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.lastText{
+    width: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 700;
+    color: rgb(252, 0, 0);  
+    
+}
+
 
