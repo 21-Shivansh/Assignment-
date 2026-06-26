@@ -29,7 +29,10 @@ let repeat = (intervalTime,shuffleTime,timeoutTime) => {
       boxes[random].style.backgroundColor = "rgb(255, 19, 149)";
       lastBox = boxes[random];
 
-      
+      lastBox.addEventListener('click',()=>{
+        scoreContent += 1;
+        score.textContent = scoreContent; 
+      },{once : true})
       
     }, shuffleTime);
 
@@ -40,11 +43,20 @@ let repeat = (intervalTime,shuffleTime,timeoutTime) => {
 
     setTimeout(() => {
       gmdiv.style.display = "flex";
-      
+      setTimeout(() => {
+        gmdiv.style.display = 'none';
+        btn.style.visibility = 'visible';
+        timmer.textContent = 0;
+        score.textContent = 0;
+        boxes.forEach(box=> box.style.backgroundColor = 'white')
+      }, 3000);
     }, timeoutTime + 250);
 };
 
-
+let level = 'Easy';
+drp.addEventListener('change',(e)=>{
+    level = e.target.value;
+})
 
 btn.addEventListener("click", () => {
   if (level == "Easy") {
