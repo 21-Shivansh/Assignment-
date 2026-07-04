@@ -81,7 +81,7 @@ main{
 }
 
 .dashboard_img{
-    height: 2rem;
+    height: 1.8rem;
     margin: 0 1rem 0 0;
 }
 
@@ -106,7 +106,7 @@ main{
 }
 
 .setting_img{
-    height: 2rem;
+    height: 1.7rem;
     margin: 0 1rem 0 0;
 }
 
@@ -136,16 +136,19 @@ main{
     height: 100%;
     width: 85%;
     background-color: brown;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
 }
 
 .dashboardPage_nav{
-    height: 9%;
+    height: 5rem;
     background-color: rgb(41, 51, 59);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.6rem 0.9rem 0.1rem 0.6rem;
+    padding: 0.4rem 1rem 0.1rem 0.7rem;
+    flex-shrink: 0;
 }
 
 .dn_text{
@@ -155,12 +158,15 @@ main{
 .dn_text1{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2rem;
+    font-weight: bold;
     color: white;
 }
 
 .dn_text2{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.04rem;
+    font-weight: 500;
+
     color: white;
 }
 
@@ -181,63 +187,204 @@ main{
 }
 
 .dashboardPage_main{
-    background-color: burlywood;
-    height: 85%;
+    background-color: #111827;
+    height: 150%;
+    flex: 1;
     display: grid;
-    grid-template-columns: 4;
-    grid-template-rows: 3;
+    grid-template-columns: 23.95% 23.95% 23.95% 23.95%;
+    grid-template-rows: 25% 70% 50%;
     grid-template-areas: 
     "dm1 dm2 dm3 dm4"
     "dm5 dm5 dm5 dm5"
     "dm6 dm6 dm7 dm7";
-    gap: 1.5rem;
+    gap: 1rem;
     padding: 1.5rem;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .dm1{
     grid-area: dm1;
-    background-color: orange;
-    height: 10rem;
+    background-color: #1F2937;
+    padding: 1.1rem 1.7rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dm1_logo_div{
+    background-color: #374151;
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 7px;
+}
+
+.bank_img{
+    height: 1.5rem;
+}
+
+.dm1_text{
+    font-family: sans-serif;
+    color: grey;
+}
+
+.dm1_textNum{
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: xx-large;
 }
 
 .dm2{
     grid-area: dm2;
-    background-color: palegreen;
-    height: 10rem;
+    background-color: #1F2937;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.1rem 1.7rem;
+}
 
+.dm2_logo_div{
+    background-color: #d3eadb;
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 7px;
+}
+
+.dm2_text{
+    font-family: sans-serif;
+    color: grey;
+}
+
+.dm2_textNum{
+    font-family: sans-serif;
+    color: rgb(0, 136, 20);
+    font-weight: bold;
+    font-size: xx-large;
 }
 
 .dm3{
     grid-area: dm3;
-    background-color: paleturquoise;
-    height: 10rem;
-    
+    background-color: #1F2937;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.1rem 1.7rem;
+}
+
+.dm3_logo_div{
+    background-color: #ffbbbb;
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 7px;
+}
+
+.dm3_text{
+    font-family: sans-serif;
+    color: grey;
+}
+
+.dm3_textNum{
+    font-family: sans-serif;
+    color: rgb(139, 0, 0);
+    font-weight: bold;
+    font-size: xx-large;
 }
 
 .dm4{
     grid-area: dm4;
-    background-color: rosybrown;
-    height: 10rem;
+    background-color: #1F2937;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.1rem 1.7rem;
 
+}
+
+.dm4_text{
+    font-family: sans-serif;
+    color: grey;
+}
+
+.dm4_textNum{
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: xx-large;
 }
 
 .dm5{
     grid-area: dm5;
-    background-color: brown;
-    min-height: 20rem;
+    background-color: #1F2937;
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+}
+
+.dm5_heading{
+    font-family: sans-serif;
+    font-size: xx-large;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.dm5_inpDiv{
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem 0 0;
+}
+
+.search_img{
+    height: 2rem;
+}
+
+.dm5_inpDiv1{
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.dm5_inp1{
+    padding: 0.4rem;
+    width: 600%;
+    border: none;
+    border-radius: 9px;
+    background-color: rgb(229, 229, 229);
+}
+
+.dm5_select{
+    padding: 0.4rem;
+    width: 15%;
+    border: none;
+    border-radius: 9px;
+    background-color: rgb(229, 229, 229);
+}
+
+.dm5_labelDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem 0.7rem 1rem;
+    border-bottom: 1px solid rgb(79, 79, 79);
+}
+
+.dm5_labelDiv_text{
+    color: #808080;
 }
 
 .dm6{
     grid-area: dm6;
-    background-color: rgb(70, 0, 0);
-    height: 10rem;
-
+    background-color: #1F2937;
+    border-radius: 10px;
 }
 
 .dm7{
     grid-area: dm7;
-    background-color: white;
-    height: 10rem;
+    background-color: #1F2937;
+    border-radius: 10px;
 
 }
