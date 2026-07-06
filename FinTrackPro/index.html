@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
+    <main class="outer_main">
         <!------------ SideBar ------------>
         <div class="sideBar">
             <div class="sb1">
@@ -31,7 +31,7 @@
             </div>
         </div>
         <!---------- Dashboard Page ---------->
-        <div class="dashboardPage">
+        <!-- <div class="dashboardPage">
             <nav class="dashboardPage_nav">
                 <div class="dn_text">
                     <p class="dn_text1">Financial Overview</p>
@@ -110,9 +110,9 @@
                 <div class="dm6">Graph</div>
                 <div class="dm7">Calender</div>
             </main>
-        </div>
+        </div> -->
         <div class="form_div">
-                <form action="">
+                <form class="dp_form" action="">
                     <span class="form_heading">
                         <p class="fh_text">Add Transaction</p>
                         <p class="fh_cross">X</p>
@@ -153,7 +153,52 @@
                     </span>
                     <button type="submit" class="fb_btn">Add Transaction</button>
                 </form>
+        </div>
+        <!----------- Setting Page ----------->
+        <div class="settingPage">
+            <div class="sp_heading">
+                <p class="sph_text1">Settings</p>
+                <p class="sph_text2">Manage your account profile and app formatting.</p>
             </div>
+            <div class="sp_main">
+                <form action="" class="sp_form">
+                    <span class="spf_heading">Profile Details</span>
+                    <span class="spf_body">
+                        <span class="spfb_1">
+                            <p class="spfb_1_text">Full Name</p>
+                            <input placeholder="Name..." class="spf_inp1" type="text">
+                        </span>
+                        <span class="spfb_2">
+                            <p class="spfb_2_text">Primary Currency</p>
+                            <select name="" id="spfb_2_select">
+                                <option value="USD">USD ($)</option>
+                                <option value="GBP">GBP (£)</option>
+                                <option value="JPY">JPY (¥)</option>
+                                <option value="EUR">EUR (€)</option>
+                                <option value="INR">INR (&#8377;)</option>
+                            </select>
+                        </span>
+                    </span>
+                    <button class="spf_btn" type="submit">Save Details</button>
+                </form>
+                <div class="spm_div">
+                    <div class="spmd1">
+                        <p class="spmd_text">
+                        Clear All Data
+                    </p>
+                    <button class="cd_btn">Clear <img class="cd_bin_img" src="assets/bin.png" alt=""></button>
+                    </div>
+                    <div class="spmd2">
+                        <p class="spmd_text">
+                            Mode
+                        </p>
+                        <button type="button" class="darkmode_btn">Light</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
