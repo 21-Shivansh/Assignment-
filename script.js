@@ -1,8 +1,4 @@
-// letuser= {
-// name:"Ritik",
-// age:20,
-// city:"Bhopal"
-// };
+
 
 // let allUser = Object.entries(letuser);
 
@@ -37,6 +33,12 @@ const students = [
   }
 ];
 
+let tm = students.reduce((acc,curr)=>{
+  return acc + curr.marks;
+},0)
+
+console.log(tm)
+
 
 // students.find((ele)=>{
 //     if(ele.name === 'Neha'){
@@ -46,7 +48,12 @@ const students = [
 
 
 
-students.forEach((ele)=>{
-    console.log(ele.name,ele.age,ele.marks)
-})
+// students.forEach((ele)=>{
+//     console.log(ele.name,ele.age,ele.marks)
+// })
 
+// let fn = ({ name , city}) => {
+//   console.log(name,city)
+// }
+
+// fn(letuser)
