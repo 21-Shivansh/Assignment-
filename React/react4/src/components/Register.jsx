@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 
-const Register = ({ setToggle }) => {
-
-    const [user,setUser] = useState([]);
-    console.log(user)
+const Register = ({ setToggle, setUser }) => {
 
     const [formData,setFormData] = useState({});
     console.log(formData)
@@ -14,8 +11,8 @@ const Register = ({ setToggle }) => {
 
     let handleSubmit = (e) => {
         e.preventDefault();
-        setUser([...user,formData]);
-        setFormData({name:'',email:'',password:''});
+        setUser((perv)=>[...perv,formData]);
+        setFormData({name:'',email:'',password:'',imageUrl:''});
     }
 
     return (
@@ -25,6 +22,7 @@ const Register = ({ setToggle }) => {
                 <label htmlFor="Name_inp">
                     <p>Name </p>
                     <input
+                        required
                         value={formData.name}
                         name='name'
                         className='border w-full p-1 rounded'
@@ -36,6 +34,7 @@ const Register = ({ setToggle }) => {
                 <label htmlFor="Email_inp">
                     <p>Email </p>
                     <input
+                        required
                         value={formData.email}
                         name='email'
                         className='border w-full p-1 rounded'
@@ -47,11 +46,24 @@ const Register = ({ setToggle }) => {
                 <label htmlFor="Password_inp">
                     <p>Password </p>
                     <input
+                        required
                         value={formData.password}
                         name='password'
                         className='border w-full mb-2 p-1 rounded'
                         placeholder='Password'
                         type='password'
+                        onChange={handleFormData}
+                    />
+                </label>
+                <label htmlFor="Password_inp">
+                    <p>Image URL </p>
+                    <input
+                        required
+                        value={formData.imageUrl}
+                        name='imageUrl'
+                        className='border w-full mb-2 p-1 rounded'
+                        placeholder='Password'
+                        type='url'
                         onChange={handleFormData}
                     />
                 </label>
