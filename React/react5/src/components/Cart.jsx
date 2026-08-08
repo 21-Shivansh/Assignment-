@@ -19,6 +19,7 @@ const Cart = () => {
         setFormData([...formData,obj]);
     }
   return (
+    <div>
       <form onSubmit={handleSubmit} className='w-80 bg-white flex flex-col gap-4 p-4' action="">
         <label className='flex flex-col' htmlFor="name">Name
             <input ref={(e)=>{formRef.current.name = e}} name='name' className='bg-gray-200 rounded border-0 ' type="text" />
@@ -42,6 +43,23 @@ const Cart = () => {
         </label>
         <button className='bg-blue-400 border rounded-4xl py-2'>Add the Item</button>
       </form>
+      <div className='text-white'>
+        {
+            formData.map((ele,idx)=>{
+                return (
+                    <div>
+                        <p>Name == {ele.pname}</p>
+                        <p>Item == {ele.item}</p>
+                        <p>Category == {ele.category}</p>
+                        <p>Price == {ele.price}</p>
+                        <p>ImageUrl == {ele.image}</p>
+                    </div>
+                )
+
+            })
+        }
+      </div>
+    </div>
   )
 }
 
