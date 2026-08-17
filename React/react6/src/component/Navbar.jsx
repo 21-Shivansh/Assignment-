@@ -7,7 +7,7 @@ const Navbar = ({setToggle,setEdtUser}) => {
   };
   return (
     <div className='flex justify-between items-center bg-black rounded-xl p-2 mb-3'>
-      <p className='text-3xl'>🤷😈✨</p>
+      <p className='text-3xl'>C Heavens✨</p>
       <div className='w-80 flex justify-between text-l'>
         <p>Home</p>
         <p>About</p>

@@ -31,7 +31,7 @@ const PopForm = ({setToggle,setUsers,setEdtUser,edtUser,users}) => {
       setToggle(prev => !prev);
       reset();
     } else {
-      setUsers(prev => [...prev, data])
+      setUsers([...users,data]);
       setToggle(prev => !prev);
       reset();
     }
